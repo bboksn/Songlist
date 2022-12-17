@@ -1,7 +1,7 @@
 import {React,useState} from 'react'
 import { useNavigate } from 'react-router-dom';
 
-export default function FormPage() {
+export default function FormPage({cards,setCards}) {
     const [formData,setFormData] = useState({});
     const navigate = useNavigate();
     function fillForm(e){
