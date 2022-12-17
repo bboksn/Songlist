@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from './Card'
 
-export default function Cardspage() {
+export default function Cardspage({cards}) {
   return (
     <>
     <div className='flex flex-wrap'>
