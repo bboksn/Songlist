@@ -20,6 +20,7 @@ export default function App() {
       <Route path='/' element={<Cardspage cards={cards} setCards={setCards}/>}/>
       <Route path='songs' element={<Cardspage cards={cards} setCards={setCards}/>}/>
       <Route path='songs/new' element={<FormPage cards={cards} setCards={setCards}/>}/>
+      <Route path='About' element={<About/>}/>
       </Routes>
     </div>
   )
