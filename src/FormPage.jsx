@@ -13,7 +13,21 @@ export default function FormPage() {
         console.log("DATA!!!",formData)
     }
     function handleForm(e){
-
+        e.preventDefault()
+        fetch('http://localhost:3001/cards', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              console.log('Success:', data);
+              // Change cards state
+              setCards([...cards,data])
+              navigate("/songs")
+            })
     }
   return (
     <div>
