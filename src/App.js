@@ -2,6 +2,7 @@ import {React,useState,useEffect} from 'react'
 import {Routes,Route} from 'react-router-dom'
 import Nav from './Nav';
 import Cardspage from './Cardspage';
+import FormPage from './FormPage';
 export default function App() {
   const [cards,setCards] = useState([{coverUrl:"",artistName:"",songName:"",tabLink:"",id:0}]);
   useEffect(() => {
