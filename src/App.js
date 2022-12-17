@@ -14,6 +14,10 @@ export default function App() {
   return (
     <div>
       <Nav></Nav>
+      <Routes>
+      <Route path='/' element={<Cardspage cards={cards} setCards={setCards}/>}/>
+      <Route path='songs' element={<Cardspage cards={cards} setCards={setCards}/>}/>
+      </Routes>
     </div>
   )
 }
