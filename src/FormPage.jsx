@@ -8,9 +8,17 @@ export default function FormPage() {
 
     }
     function handleForm(e){
-        
+
     }
   return (
-    <div>FormPage</div>
+    <div>
+        <form className='flex flex-col border-2' onSubmit={handleForm}>
+         Cover Image Url: <input className='border-2 border-black border-dashed mb-7'  onChange={fillForm} name='coverUrl' type="text"/>
+         Artist Name:   <input className='border-2 border-black border-dashed mb-7' onChange={fillForm} name='artistName' type="text"/>
+         Song Name:   <input className='border-2 border-black border-dashed mb-7'  onChange={fillForm} name='songName' type="text"/>
+         GuitarTab/Youtube Url:   <input className='border-2 border-black border-dashed mb-7' onChange={fillForm} name='tabLink' type="text"/>
+         <button className='lg:text-3xl border-black border-4 w-[10%] self-center rounded-xl font-serif' type='submit'>Enter</button>
+        </form>
+    </div>
   )
 }
