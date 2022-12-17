@@ -5,7 +5,12 @@ export default function FormPage() {
     const [formData,setFormData] = useState({});
     const navigate = useNavigate();
     function fillForm(e){
-
+        e.preventDefault();
+        setFormData({
+            ...formData,
+            [e.currentTarget.name]:e.currentTarget.value
+        })
+        console.log("DATA!!!",formData)
     }
     function handleForm(e){
 
